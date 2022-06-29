@@ -1,14 +1,11 @@
 function lonely_integer(arr) {
-  let i = 0;
-  while (i < arr.length) {
+  for (let i = 0; i < arr.length; i++) {
     if (arr.includes(-arr[i])) {
       continue;
     } else {
       return arr[i];
     }
-
-    i++;
   }
 }
-const result = lonely_integer([-3, 1, 2, 3, -1, -4, -2]);
+const result = lonely_integer([1, -1, 2, -2, 3]);
 console.log(result);
