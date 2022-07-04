@@ -4,11 +4,6 @@ let obj = {
   "Pearl Necklace": 4650,
 };
 
-const jewelryItem = getFirstChartToMakeUppercase(
-  prompt("Write down the name of each piece of jewelry")
-);
-obj[jewelryItem] = +prompt("write down the price of  jewelry");
-
 function check_jewelry(price) {
   for ([key, value] of Object.entries(obj)) {
     if (value == price) {
@@ -35,6 +30,5 @@ function getFirstChartToMakeUppercase(key) {
     })
     .join(" ");
 }
-console.log();
-console.log(obj);
+
 console.log(mostExpensive(obj));
