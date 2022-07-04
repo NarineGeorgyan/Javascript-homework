@@ -1,31 +1,19 @@
-function point(num){
-    let str ="";
-    for( let i= 0; i<num; i++){
-      str+="#"        
+function makeBox(num) {
+  let a = "";
+  let b = " ";
+  for (let i = 0; i < num; i++) {
+    a += "#";
+    if (i == 0 || i < num - 2) {
+      b += "*";
     }
-    return str;
-}
-function spacePoint(num){
-    let str  = "";
-    for( let i= 0; i<num; i++){
-      str+="*"        
+  }
+  for (let i = 0; i < num; i++) {
+    if (i == 0 || i == num - 1) {
+      console.log(a);
+    } else {
+      console.log(b);
     }
-    return str;
+  }
 }
-function makeBox(num){
-    
-    let space=3;
-    let str= "";
-   for(let i=num; i>0; i--){
-    str+=point(i)+"\n"
-    for(let j= i; j<num-1; j++){
-       
-        str+=point(i)+spacePoint(space)+point(i)+"\n"
-           }
-    
-   }
-   
-    return str;
-}
-const result= makeBox(2)
+const result = makeBox(5);
 console.log(result);
