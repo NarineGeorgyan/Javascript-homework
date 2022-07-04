@@ -1,10 +1,13 @@
 function makeBox(num) {
   let a = "";
-  let b = " ";
+  let b = "#";
   for (let i = 0; i < num; i++) {
     a += "#";
     if (i == 0 || i < num - 2) {
       b += "*";
+    }
+    if (i == num - 1) {
+      b += "#";
     }
   }
   for (let i = 0; i < num; i++) {
@@ -15,5 +18,5 @@ function makeBox(num) {
     }
   }
 }
-const result = makeBox(5);
+const result = makeBox(4);
 console.log(result);
