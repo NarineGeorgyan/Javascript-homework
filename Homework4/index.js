@@ -14,4 +14,4 @@ function happyNumber(num) {
 
   return happyNumber(sum);
 }
-console.log(happyNumber(39));
+console.log(happyNumber(12));
