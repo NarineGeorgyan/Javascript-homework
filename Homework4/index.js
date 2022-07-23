@@ -7,12 +7,11 @@ function sumNumberPow(num) {
     }, 0);
 }
 function happyNumber(num) {
-  if (num === 1) {
+  sum = sumNumberPow(num);
+  if (sum === 1) {
     return "happy num";
-  } else if (num > 4) {
-    return -1;
-  }
-  num = sumNumberPow(num);
-  return happyNumber(num);
+  } else if (sum > 1 && sum <= 4) return -1;
+
+  return happyNumber(sum);
 }
-console.log(happyNumber(67));
+console.log(happyNumber(39));
