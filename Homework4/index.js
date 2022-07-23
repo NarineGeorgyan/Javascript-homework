@@ -9,8 +9,8 @@ function sumNumberPow(num) {
 function happyNumber(num) {
   sum = sumNumberPow(num);
   if (sum === 1) {
-    return "happy num";
-  } else if (sum > 1 && sum <= 4) return -1;
+    return true;
+  } else if (sum > 1 && sum <= 4) return false;
 
   return happyNumber(sum);
 }
