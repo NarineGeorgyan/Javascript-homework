@@ -1,0 +1,30 @@
+body {
+  background-color: aqua;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.container {
+  width: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px 100px 100px;
+  background-color: blueviolet;
+}
+.container > div {
+  border: 2px solid black;
+}
+.start-button {
+  width: 500px;
+  background-color: blue;
+  color: azure;
+  font-size: 24px;
+  cursor: pointer;
+}
+.checked {
+  background-color: red !important;
+}
