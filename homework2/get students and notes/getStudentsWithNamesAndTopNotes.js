@@ -2,7 +2,7 @@ const arr = [
   { name: "John", notes: [3, 5, 4] },
   { name: "Max", notes: [1, 4, 6] },
   { name: "Zygmund", notes: [1, 2, 3] },
-  { name: "Zygmund", notes: [] },
+  { name: "Zygmund", notes: [1] },
 ];
 function getStudentsWithNamesAndTopNotes(arr) {
   return arr.map((obj, i) => {
@@ -18,3 +18,18 @@ function getStudentsWithNamesAndTopNotes(arr) {
   });
 }
 console.log(getStudentsWithNamesAndTopNotes(arr));
+function getMaxValue(arr) {
+  let newArray = [];
+  arr.forEach((obj) => {
+    let index1 = arr.findIndex((val) => val.name === "Zygmund");
+    arr.splice(index1, 1);
+    console.log(index1);
+    newArray.push({
+      name: obj.name,
+      maxValue: obj.notes.reduce((acc, val) => (acc > val ? acc : val)),
+    });
+  });
+  return newArray;
+}
+let result = getMaxValue(arr);
+console.log(result);

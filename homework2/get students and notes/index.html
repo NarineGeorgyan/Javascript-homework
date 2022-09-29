@@ -7,6 +7,31 @@
     <title>Document</title>
   </head>
   <body>
-    <script src="getStudentsWithNamesAndTopNotes.js"></script>
+    <div id="progress"></div>
+    <div id="minute"></div>
+
+    <script>
+      let i = 0;
+      let j = 0;
+      function count() {
+        // сделать часть крупной задачи (*)
+        do {
+          i++;
+          if (i < 10) {
+            progress.innerHTML = "0" + `${i}`;
+          } else progress.innerHTML = i;
+        } while (i > 60);
+
+        // if (i < 60) {
+        //   setTimeout(count, 50);
+        // }
+        if ((i = 60)) {
+          j++;
+          console.log(j);
+          minute.innerHTML = j;
+        }
+      }
+      count();
+    </script>
   </body>
 </html>
