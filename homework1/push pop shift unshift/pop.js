@@ -8,3 +8,4 @@ function pop(arr) {
 }
 const resultPop = pop([5, 6, false]);
 console.log(`resultPop: ${resultPop}`);
+console.log(`resultPop: ${resultPop}`);
